@@ -36,8 +36,8 @@ public class Flower extends Item {
         return "A " + color + " " + flowerType + " flower";
     }
 
-    public void setType(FlowerType flowerType) {
-        this.flowerType = flowerType;
+    public void setType(FlowerType newFlowerType) {
+        this.flowerType = newFlowerType;
     }
     
     public FlowerType getType() {
