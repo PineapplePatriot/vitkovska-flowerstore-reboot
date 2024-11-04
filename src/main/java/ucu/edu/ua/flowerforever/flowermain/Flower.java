@@ -42,5 +42,6 @@ public class Flower extends Item {
     
     public FlowerType getType() {
         return this.flowerType;
-    }    
+    }
+//Test comm  
 }
