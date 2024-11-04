@@ -35,4 +35,12 @@ public class Flower extends Item {
     public String getDescription() {
         return "A " + color + " " + flowerType + " flower";
     }
+
+    public void setType(FlowerType flowerType) {
+        this.flowerType = flowerType;
+    }
+    
+    public FlowerType getType() {
+        return this.flowerType;
+    }    
 }
