@@ -8,7 +8,7 @@ import ucu.edu.ua.flowerforever.decorators.PaperDecorator;
 import ucu.edu.ua.flowerforever.decorators.BasketDecorator;
 import ucu.edu.ua.flowerforever.decorators.RibbonDecorator;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Assertions;
 
 public class DecoratorTest {
     private static final double PAPER_COST = 13.0;
@@ -24,7 +24,7 @@ public class DecoratorTest {
 
         Item paperDecoratedFlower = new PaperDecorator(originalFlower);
         double expectedPrice = originalFlower.getPrice() + PAPER_COST;
-        assertEquals(expectedPrice, paperDecoratedFlower.getPrice());
+        Assertions.assertEquals(expectedPrice, paperDecoratedFlower.getPrice());
     }
 
     @Test
@@ -36,7 +36,7 @@ public class DecoratorTest {
 
         Item basketDecoratedFlower = new BasketDecorator(originalFlower);
         double expectedPrice = originalFlower.getPrice() + BASKET_COST;
-        assertEquals(expectedPrice, basketDecoratedFlower.getPrice());
+        Assertions.assertEquals(expectedPrice, basketDecoratedFlower.getPrice());
     }
 
     @Test
@@ -48,7 +48,7 @@ public class DecoratorTest {
 
         Item ribbonDecoratedFlower = new RibbonDecorator(originalFlower);
         double expectedPrice = originalFlower.getPrice() + RIBBON_COST;
-        assertEquals(expectedPrice, ribbonDecoratedFlower.getPrice());
+        Assertions.assertEquals(expectedPrice, ribbonDecoratedFlower.getPrice());
     }
 
     @Test
@@ -58,9 +58,10 @@ public class DecoratorTest {
         originalFlower.setColor(FlowerColor.RED);
 
         Item paperDecoratedFlower = new PaperDecorator(originalFlower);
-        String expectedDescription = "A " + originalFlower.getColor() + " " 
+        String expectedDescription = "A " 
+        + originalFlower.getColor() + " " 
         + originalFlower.getType() + " flower, wrapped in paper";
-        assertEquals(expectedDescription, 
+        Assertions.assertEquals(expectedDescription, 
         paperDecoratedFlower.getDescription());
     }
 
@@ -71,9 +72,10 @@ public class DecoratorTest {
         originalFlower.setColor(FlowerColor.BLUE);
 
         Item basketDecoratedFlower = new BasketDecorator(originalFlower);
-        String expectedDescription = "A " + originalFlower.getColor() + " " + 
-        originalFlower.getType() + " flower, placed in a basket";
-        assertEquals(expectedDescription,
+        String expectedDescription = "A " 
+        + originalFlower.getColor() + " " 
+        + originalFlower.getType() + " flower, placed in a basket";
+        Assertions.assertEquals(expectedDescription,
         basketDecoratedFlower.getDescription());
     }
 
@@ -84,9 +86,10 @@ public class DecoratorTest {
         originalFlower.setColor(FlowerColor.GREEN);
 
         Item ribbonDecoratedFlower = new RibbonDecorator(originalFlower);
-        String expectedDescription = "A " + originalFlower.getColor() + " " + 
-        originalFlower.getType() + " flower, decorated with a ribbon";
-        assertEquals(expectedDescription, 
+        String expectedDescription = "A " 
+        + originalFlower.getColor() + " " 
+        + originalFlower.getType() + " flower, decorated with a ribbon";
+        Assertions.assertEquals(expectedDescription, 
         ribbonDecoratedFlower.getDescription());
     }
 }
