@@ -36,7 +36,8 @@ public class DecoratorTest {
 
         Item basketDecoratedFlower = new BasketDecorator(originalFlower);
         double expectedPrice = originalFlower.getPrice() + BASKET_COST;
-        Assertions.assertEquals(expectedPrice, basketDecoratedFlower.getPrice());
+        Assertions.assertEquals(expectedPrice, 
+        basketDecoratedFlower.getPrice());
     }
 
     @Test
@@ -47,8 +48,10 @@ public class DecoratorTest {
         originalFlower.setColor(FlowerColor.GREEN);
 
         Item ribbonDecoratedFlower = new RibbonDecorator(originalFlower);
-        double expectedPrice = originalFlower.getPrice() + RIBBON_COST;
-        Assertions.assertEquals(expectedPrice, ribbonDecoratedFlower.getPrice());
+        double expectedPrice = originalFlower.getPrice() 
+        + RIBBON_COST;
+        Assertions.assertEquals(expectedPrice, 
+        ribbonDecoratedFlower.getPrice());
     }
 
     @Test
