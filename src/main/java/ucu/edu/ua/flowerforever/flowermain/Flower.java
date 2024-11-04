@@ -30,4 +30,9 @@ public class Flower extends Item {
     public String getColor() {
         return color.toString();
     }
+
+    @Override
+    public String getDescription() {
+        return "A " + color + " " + flowerType + " flower";
+    }
 }

@@ -17,4 +17,9 @@ public class FlowerBucket extends Item {
     public void add(FlowerPack flowerPack) {
         flowerPacks.add((flowerPack));
     }
+
+    @Override
+    public String getDescription() {
+        return "A bouquet with flowers, costing" + getPrice() + ".";
+    }
 }
