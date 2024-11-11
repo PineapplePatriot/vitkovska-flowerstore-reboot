@@ -11,3 +11,23 @@ Content-Type: application/json
   "color": "blue",
   "price": 100
 }
+###
+GET http://localhost:8080/api/flowers/payment
+
+###
+GET http://localhost:8080/api/flowers/delivery
+
+###
+GET http://localhost:8080/api/users/list
+
+
+###
+POST http://localhost:8080/api/users/add
+Content-Type: application/json
+
+{
+  "id": 2,
+  "email": "my@gmail.com",
+  "dob": "2018-05-25",
+  "age": 11
+}
